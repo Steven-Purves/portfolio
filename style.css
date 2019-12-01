@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    font-family:'Exo 2', sans-serif;
+  }
+  
+  a {
+  color: white;
+  }
+
+  /* header */
+  .sig-pic{
+    padding:0px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 25px;
+    bottom: 0;
+  }
+  .header {
+    background-color: #151515;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+    z-index: 3;
+    line-height: 60px;
+  }
+  
+  .header ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    overflow: hidden;
+
+  }
+  
+  .header li a {
+    display: block;
+    padding: 50px 0px;
+    outline: 5px solid #004e7e;
+    background-color:rgb(31,31,31);opacity:.9;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    color:#004e7e;
+    background: #151515;
+  }
+  
+  /* menu */
+  
+  .header .menu {
+    clear: both;
+    font-size: 4em;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    text-align: center;
+  }
+  
+  /* menu icon */
+  
+  .header .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 43px 30px;
+    position: relative;
+    user-select: none;
+    
+  }
+  
+  .header .menu-icon .nav-icon {
+    background:white;
+    display: block;
+    height: 11px;
+    
+    position: relative;
+    transition: background .2s ease-out;
+    width: 100px;
+  }
+  
+  .header .menu-icon .nav-icon:before{
+    background:white;
+    content:"";
+    display:block;
+    height:100%;
+    width:100%;
+    position:absolute;
+    transition:all .2s ease-out;
+    top:5px;  
+  }
+  .header .menu-icon .nav-icon:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+  
+  .header .menu-icon .nav-icon:before {
+    top: 27px;
+  }
+  
+  .header .menu-icon .nav-icon:after {
+    top: -27px;
+  }
+  
+  /* menu btn */
+  
+  .header .menu-btn {
+    display: none;
+  }
+  
+  .header .menu-btn:checked ~ .menu {
+    max-height: 900px;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon {
+    background: transparent;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:before {
+    transform: rotate(-45deg);
+    top:0;
+  }
+  
+  .header .menu-btn:checked ~ .menu-icon .nav-icon:after {
+    transform: rotate(45deg);
+    top:0;
+  }
+  
+  
+  /* 48em = 768px @ 16pt font */
+  
+ 
+  .contact-page{
+    line-height: 25px; 
+  }
+
+.banner-area{
+    
+    background-image: url(/img/iphone-background.png);
+   
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+.about-area,.showreel-area, .current-work-area, .contact-area{
+    padding-top: 5em;
+    padding-bottom: 5em;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;  
+    line-height: 0px; 
+}
+.current-work-area{
+  background: linear-gradient(to right,
+  #EE9AE5,
+  #5961F9);
+  color: #151515;
+}
+.about-area{
+    background: linear-gradient(to right,
+    rgb(68, 255, 191),
+    rgb(70, 166, 226));
+    color: #151515;
+}
+
+.showreel-area, .contact-area{
+    background: #262626;
+    color: #ffff;
+}
+
+.text-part{
+    width: 75%;
+    height: 80%;
+}
+#line {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 2px;
+  background-color: #151515;
+}
+#line-white{
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  height: 2px;
+  background-color: white;
+}
+#line-right {
+  
+  display: block;
+  width: 15%;
+  height: 2px;
+  background-color: #151515;
+}
+h1{
+    font-size: 50px;
+    text-align: center;  
+    padding-bottom: 0.3em;
+}
+h3{
+    font-size: 37px;
+    line-height: 40px;
+}
+p{
+    font-size: 24px;
+    line-height: 40px;
+    padding-bottom: 0.6em;
+}
+h4{
+  font-size: 24px;
+  text-align: center;  
+}
+html{
+    scroll-behavior: smooth;
+}
+.id-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.mail-pic{
+  padding-right: .8em;
+  width: 6.5%;
+}
+.pic-n-unity{
+  display: flex;
+  align-items: center;
+  align-self: auto;
+  justify-content: center;
+  flex-direction: row;    
+}
+.mail-icon{
+  display: flex;
+  align-items: center;
+  align-self: auto;
+  justify-content: left;
+  flex-direction: row;    
+}
+h2{
+  margin: 0;
+  padding: 0; 
+  color:#fff;
+  font-size: 85px;
+  text-shadow: 4px 4px 12px #000000;
+}
+.git-link-img {
+  padding-top: 4em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.icon-grid{
+  padding-top:2rem;
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  row-gap: 2em;
+}
+.icon-grid-box{
+  width: 100%;
+  height: 100%;
+  max-height: 130px;
+  max-width: 130px;
+  object-fit: cover;
+}
+.video-grid{
+  padding-top:1rem;
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 1.5em;
+}
+.video-grid-box{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid #262626;
+}
+.vid-parent{
+  width:100%;
+  display:block;
+}
+.video-reel{
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+  display: block;
+  padding-bottom: 5em;
+  border: 5px solid #262626;
+}
+
+  /* width */
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 opx #004e7e;
+    background-color:#151515
+   
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #004e7e; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: white; 
+  }
+
+  * {box-sizing: border-box;}
+
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  textarea{
+    font-family:'Exo 2', sans-serif;
+    font-weight:normal;
+    font-size: .8em;;
+  }
+  .container {
+    border-radius: 5px;
+    color:#1f1f1f;
+    font-size: 20px;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+ 
+.button {
+  background-color:#004e7e;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius: 20px;
+  
+}
+.button:hover {
+  background-color: #4CAF50; /* Green */
+}
+.button-wrapper{
+  text-align:right;
+}
+
+
+@media (min-width: 80em) {
+  
+  
+  .banner-area{
+
+    background-image: url(img/GeoLine.png);
+    background-attachment: fixed;
+  }
+
+
+
+
+  .sig-pic{
+      left: 68px;
+      height: 35px;
+  }
+  .header {
+      height: 50px;
+      z-index: 3;
+      line-height: 50px;
+  }
+  .header li a {
+      display: block;
+      padding: 0px 20px;
+      outline: 0px solid;
+     
+      font-size:20px;
+      
+      background-color: #151515;
+      text-decoration: none;
+     
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+      color:#004e7e;
+      background: #151515;
+  }
+  .header li {
+      float: left;  
+  }
+  
+  .header .menu {
+    clear: none;
+    float: right;
+    
+    max-height: none;
+  }
+  .header .menu-icon {
+    padding-right: px;
+  }
+
+  .header .menu-icon .nav-icon {
+      height: 0px;
+      width: 10px;
+    }
+
+    .text-p{
+      width: 80%;
+      margin: auto;
+    }
+   .contact-page{
+    width: 50%;
+    margin: auto;
+   }
+   .video-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+  .video-reel{
+
+      width: 75%;
+      
+  }
+}
+.material-icons.md-48 { font-size: 48px;
+  
+padding: 0;
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 0;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
